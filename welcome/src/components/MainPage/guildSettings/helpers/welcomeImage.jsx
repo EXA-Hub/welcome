@@ -8,7 +8,7 @@ import ColorPicker from 'react-best-gradient-color-picker';
 import gradient from 'gradient-parser';
 import _ from 'lodash'; // for debounce and isEqual functions
 
-const serverHosts = [
+let serverHosts = [
   "http://localhost:5000",
   "http://localhost:3000",
   "https://heftybulkyinversion.rakanandzampx.repl.co",
@@ -17,22 +17,27 @@ const serverHosts = [
 let serverHost = serverHosts[0];
 
 async function getServerHost() {
-  for (let host of serverHosts) {
-    try {
-      const response = await fetch(`${host}/test?testCode=ZAMPX`, {
-        method: 'GET'
-      });
+  fetch('/urls.json')
+    .then(response => response.json())
+    .then(async (data) => {
+      serverHosts = serverHosts.push(...data);
+      for (let host of serverHosts) {
+        try {
+          const response = await fetch(`${host}/test?testCode=ZAMPX`, {
+            method: 'GET'
+          });
 
-      if (await response.text() === "this is the host") {
-        serverHost = host; // store the first host that responds ok in serverHost
-        return;
+          if (await response.text() === "this is the host") {
+            serverHost = host; // store the first host that responds ok in serverHost
+            return;
+          }
+        } catch (error) {
+          console.log(`Error with host ${host}: `, error);
+        }
       }
-    } catch (error) {
-      console.log(`Error with host ${host}: `, error);
-    }
-  }
 
-  throw new Error('No valid host found');
+      throw new Error('No valid host found');
+    });
 }
 
 getServerHost()

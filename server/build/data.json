@@ -2,7 +2,7 @@
     "StageData": {
         "width": 720,
         "height": 480,
-        "background": "/bg.jpeg"
+        "background": "/Welcome.png"
     },
     "AvatarData": {
         "url": "/user.png",
