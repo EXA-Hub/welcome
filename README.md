@@ -3,8 +3,6 @@
 ## Description
 This is a simple Discord bot that sends a welcome message to new members of your server.
 
-![Discord Users Over Time]
-
 ## Features
 - Sends a welcome message to new members.
 - The welcome message is customizable.
@@ -18,6 +16,7 @@ Once the bot is running, it will automatically send a welcome message to any new
 I have created a YouTube tutorial on how to set up and use this bot. You can watch it below:
 
 <!-- BEGIN YOUTUBE-CARDS -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g-BfHb4cmTU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <!-- END YOUTUBE-CARDS -->
 
 <h3>
