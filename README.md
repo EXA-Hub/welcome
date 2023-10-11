@@ -13,7 +13,7 @@ This is a simple Discord bot that sends a welcome message to new members of your
 ## Usage
 Once the bot is running, it will automatically send a welcome message to any new members who join your server.
 
-##  YouTube Tutorial
+## YouTube Tutorial
 
 I have created a YouTube tutorial on how to set up and use this bot. You can watch it below:
 
