@@ -19,13 +19,7 @@ I have created a YouTube tutorial on how to set up and use this bot. You can wat
 <!-- BEGIN YOUTUBE-CARDS -->
 <!-- END YOUTUBE-CARDS -->
 
-<h3 align="center">A passionate frontend developer from India</h3>
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
 <a href="https://www.youtube.com/c/https://youtube.com/exatube" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://youtube.com/exatube" height="30" width="40" /></a>
-</p>
-
 
 ## Discord Server
 Join our Discord server for more updates and support:
