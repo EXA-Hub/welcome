@@ -25,7 +25,7 @@ Join our Discord server for more updates and support:
 
 Join our Discord Server
 
-Replace `your-invite-code` with the actual invite code of your Discord server. For example, if your server invite URL is `https://discord.gg/abc123`, then `abc123` is your invite code.
+![My Discord](https://discord-readme-badge.vercel.app/api?id=635933198035058700)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
