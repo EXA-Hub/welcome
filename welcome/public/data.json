@@ -1,0 +1,30 @@
+{
+    "StageData": {
+        "width": 720,
+        "height": 480,
+        "background": "/Welcome.png"
+    },
+    "AvatarData": {
+        "url": "/user.png",
+        "x": 60,
+        "y": 120,
+        "width": 128,
+        "height": 128,
+        "scaleX": 1,
+        "scaleY": 1,
+        "rotation": 0,
+        "circle": false,
+        "cornerRadius": 0
+    },
+    "TextData": {
+        "text": "ZAMPX#9999",
+        "x": 60,
+        "y": 120,
+        "fontSize": 12,
+        "rotation": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "fill": "rgba(365,365,365,1)",
+        "font": "PixelifySans-VariableFont_wght.ttf"
+    }
+}
