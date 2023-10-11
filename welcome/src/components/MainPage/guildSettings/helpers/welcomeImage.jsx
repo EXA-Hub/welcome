@@ -16,7 +16,8 @@ async function getServerHost() {
   fetch('/urls.json')
     .then(response => response.json())
     .then(async (data) => {
-      serverHosts = serverHosts.push(...data);
+      serverHosts.push(...data);
+      console.log(serverHosts);
       for (let host of serverHosts) {
         try {
           const response = await fetch(`${host}/test?testCode=ZAMPX`, {
