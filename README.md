@@ -13,12 +13,19 @@ This is a simple Discord bot that sends a welcome message to new members of your
 ## Usage
 Once the bot is running, it will automatically send a welcome message to any new members who join your server.
 
-[![YouTube](https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg)](https://www.youtube.com/c/exatube) ##  YouTube Tutorial
+##  YouTube Tutorial
 
 I have created a YouTube tutorial on how to set up and use this bot. You can watch it below:
 
 <!-- BEGIN YOUTUBE-CARDS -->
 <!-- END YOUTUBE-CARDS -->
+
+<h2>
+  <a href="https://www.youtube.com/c/exatube" target="_blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://youtube.com/exatube" height="30" width="40" />
+  </a>
+  YouTube Tutorial
+</h2>
 
 ## Discord Server
 Join our Discord server for more updates and support:
