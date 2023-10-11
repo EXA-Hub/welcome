@@ -25,7 +25,7 @@ Join our Discord server for more updates and support:
 
 Join our Discord Server
 
-![My Discord](https://discord-readme-badge.vercel.app/api?id=635933198035058700)
+![My Discord](https://discord-readme-badge-mu.vercel.app/api?id=635933198035058700)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
