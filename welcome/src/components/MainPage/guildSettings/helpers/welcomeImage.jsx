@@ -8,11 +8,7 @@ import ColorPicker from 'react-best-gradient-color-picker';
 import gradient from 'gradient-parser';
 import _ from 'lodash'; // for debounce and isEqual functions
 
-let serverHosts = [
-  "http://localhost:5000",
-  "http://localhost:3000",
-  "https://heftybulkyinversion.rakanandzampx.repl.co",
-];
+let serverHosts = [];
 
 let serverHost = serverHosts[0];
 
