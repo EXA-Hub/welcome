@@ -18,7 +18,7 @@ I have created a YouTube tutorial on how to set up and use this bot. You can wat
 <!-- BEGIN YOUTUBE-CARDS -->
 <!-- END YOUTUBE-CARDS -->
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g-BfHb4cmTU?si=xuM5XShBtSGsJR2i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## [![My Cool Video](http://img.youtube.com/vi/g-BfHb4cmTU/0.jpg)](http://www.youtube.com/watch?v=g-BfHb4cmTU "My Cool Video")
 
 <h3>
   <a href="https://www.youtube.com/c/exatube" target="_blank">
