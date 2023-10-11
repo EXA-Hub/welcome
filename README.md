@@ -16,9 +16,8 @@ Once the bot is running, it will automatically send a welcome message to any new
 ## YouTube Tutorial
 I have created a YouTube tutorial on how to set up and use this bot. You can watch it below:
 
-!YouTube Tutorial
-
-Replace `VIDEO_ID` with the actual ID of your YouTube video. For example, if your video URL is `https://www.youtube.com/watch?v=dQw4w9WgXcQ`, then `dQw4w9WgXcQ` is your `VIDEO_ID`.
+<!-- BEGIN YOUTUBE-CARDS -->
+<!-- END YOUTUBE-CARDS -->
 
 ## Discord Server
 Join our Discord server for more updates and support:
