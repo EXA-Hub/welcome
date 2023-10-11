@@ -32,9 +32,7 @@ Join our Discord server for more updates and support:
 
 Join our Discord Server
 
-<a href="https://discord.gg/ejYNZwDVHH" target="_blank">
-    <img src="https://discord-readme-badge-mu.vercel.app/api?id=635933198035058700" alt="My Discord" />
-</a>
+[![My Discord](https://discord-readme-badge-mu.vercel.app/api?id=635933198035058700)](https://discord.gg/ejYNZwDVHH)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
