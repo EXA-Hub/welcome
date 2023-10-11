@@ -16,8 +16,9 @@ Once the bot is running, it will automatically send a welcome message to any new
 I have created a YouTube tutorial on how to set up and use this bot. You can watch it below:
 
 <!-- BEGIN YOUTUBE-CARDS -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g-BfHb4cmTU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <!-- END YOUTUBE-CARDS -->
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g-BfHb4cmTU?si=xuM5XShBtSGsJR2i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <h3>
   <a href="https://www.youtube.com/c/exatube" target="_blank">
