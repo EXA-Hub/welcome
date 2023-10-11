@@ -13,28 +13,26 @@ let serverHosts = [];
 let serverHost = serverHosts[0];
 
 async function getServerHost() {
-  fetch('/urls.json')
-    .then(response => response.json())
-    .then(async (data) => {
-      serverHosts.push(...data);
-      console.log(serverHosts);
-      for (let host of serverHosts) {
-        try {
-          const response = await fetch(`${host}/test?testCode=ZAMPX`, {
-            method: 'GET'
-          });
+  let data = await fetch('/urls.json');
+  data = await data.json();
+  serverHosts.push(...data);
+  for (let host of serverHosts) {
+    try {
+      const response = await fetch(`${host}/test?testCode=ZAMPX`, {
+        method: 'GET'
+      });
 
-          if (await response.text() === "this is the host") {
-            serverHost = host; // store the first host that responds ok in serverHost
-            return;
-          }
-        } catch (error) {
-          console.log(`Error with host ${host}: `, error);
-        }
+      if (await response.text() === "this is the host") {
+        serverHost = host; // store the first host that responds ok in serverHost
+        return;
       }
+    } catch (error) {
+      console.log(`Error with host ${host}: `, error);
+    }
+  }
 
-      throw new Error('No valid host found');
-    });
+  throw new Error('No valid host found');
+
 }
 
 getServerHost()
