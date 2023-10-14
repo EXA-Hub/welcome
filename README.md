@@ -15,7 +15,7 @@ Once the bot is running, it will automatically send a welcome message to any new
 
 I have created a YouTube tutorial on how to set up and use this bot. You can watch it below:
 
-## [![My Cool Video](http://img.youtube.com/vi/g-BfHb4cmTU/0.jpg)](http://www.youtube.com/watch?v=g-BfHb4cmTU "My Cool Video")
+## [![My Cool Video](http://img.youtube.com/vi/xPg_J4-zQrY/0.jpg)](http://www.youtube.com/watch?v=xPg_J4-zQrY "My Cool Video")
 
 <h2>
   <a href="https://www.youtube.com/c/exatube" target="_blank">
