@@ -8,6 +8,14 @@ import ColorPicker from 'react-best-gradient-color-picker';
 import gradient from 'gradient-parser';
 import _ from 'lodash'; // for debounce and isEqual functions
 
+function truncateString(inputString) {
+  if (inputString.length > 5) {
+    return ".." + inputString.substring(0, 5);
+  } else {
+    return inputString;
+  }
+}
+
 let serverHosts = [];
 
 let serverHost = serverHosts[0];
@@ -21,6 +29,7 @@ async function getServerHost() {
       const response = await fetch(`${host}/test?testCode=ZAMPX`, {
         method: 'GET'
       });
+      console.log(`${host}/test?testCode=ZAMPX`);
 
       if (await response.text() === "this is the host") {
         serverHost = host; // store the first host that responds ok in serverHost
@@ -501,7 +510,7 @@ export default class welcomeCard extends Component {
                         draggable
                         text={TextData.text
                           .replace("{{discordTag}}", paramsObj.discordTag || discordTag)
-                          .replace("{{name}}", paramsObj.name || name)
+                          .replace("{{name}}", truncateString(paramsObj.name || name))
                           .replace("{{tag}}", paramsObj.tag || tag)
                           .replace("{{memberCount}}", paramsObj.memberCount || memberCount)}
                         x={TextData.x}
@@ -568,7 +577,7 @@ export default class welcomeCard extends Component {
                           draggable
                           text={TextData.text
                             .replace("{{discordTag}}", paramsObj.discordTag || discordTag)
-                            .replace("{{name}}", paramsObj.name || name)
+                            .replace("{{name}}", truncateString(paramsObj.name || name))
                             .replace("{{tag}}", paramsObj.tag || tag)
                             .replace("{{memberCount}}", paramsObj.memberCount || memberCount)}
                           x={TextData.x}
@@ -613,7 +622,7 @@ export default class welcomeCard extends Component {
                         draggable
                         text={TextData.text
                           .replace("{{discordTag}}", paramsObj.discordTag || discordTag)
-                          .replace("{{name}}", paramsObj.name || name)
+                          .replace("{{name}}", truncateString(paramsObj.name || name))
                           .replace("{{tag}}", paramsObj.tag || tag)
                           .replace("{{memberCount}}", paramsObj.memberCount || memberCount)}
                         x={TextData.x}
