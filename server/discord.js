@@ -27,17 +27,19 @@ async function send(browser, { discordTag, tag, name, memberCount }) {
 
     const page = await browser.newPage();
 
+    const password = 'zampx';
+
     // Convert data to query string
-    const params = new URLSearchParams({ discordTag, tag, name, memberCount });
+    const params = new URLSearchParams({ discordTag, tag, name, memberCount, password });
 
     // Navigate to your webpage
     await page.goto(`${url}?${params.toString()}`, { waitUntil: 'networkidle0' });
 
     // Wait for the button to appear on the page
-    await page.waitForSelector('#body > div > div.card > div:nth-child(1) > button');
+    await page.waitForSelector('#body > div > div.card > div:nth-child(1) > button:nth-child(3)');
 
     // Click the button
-    await page.click('#body > div > div.card > div:nth-child(1) > button');
+    await page.click('#body > div > div.card > div:nth-child(1) > button:nth-child(3)');
 
     await page.waitForFunction(() => {
         return Array.from(document.querySelectorAll('span')).find(el => el.textContent === 'تم إرسال الترحيب');

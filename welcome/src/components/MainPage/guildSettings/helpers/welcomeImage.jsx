@@ -16,7 +16,9 @@ function truncateString(inputString) {
   }
 }
 
-let serverHosts = [];
+let serverHosts = [
+  "http://localhost:5000"
+];
 
 let serverHost = serverHosts[0];
 
@@ -427,8 +429,6 @@ export default class welcomeCard extends Component {
               <input
                 value={this.state.webhookUrl}
                 onChange={(e) => {
-                  if (!e.target.value || e.target.value.length < 0)
-                    return state.webhookUrl = null;
                   state.webhookUrl = e.target.value;
                   this.setState(state);
                   e.target.style.color = "";
@@ -479,6 +479,9 @@ export default class welcomeCard extends Component {
               className="form-control  DisocrdMsg"
               placeholder="رسالة نصية للترحيب"
             />
+            <Button variant="primary" onClick={() => {
+              this.setState({ ask: !this.state.ask });
+            }}>Edit</Button>
             <Button variant="primary" onClick={this.handleSendImage}>Send</Button>
           </div>
           {this.state.uploading ? (

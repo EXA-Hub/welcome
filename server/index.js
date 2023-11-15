@@ -3,36 +3,10 @@ import cors from 'cors';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs'; // Import fs module
-import chalk from 'chalk';
 import url from 'url';
-
-const loadJSON = (path) => JSON.parse(fs.readFileSync(new URL(path, import.meta.url)));
-
-const allowedIps = loadJSON('./build/ips.json');
 
 const app = express();
 const port = 5000;
-
-function formatIp(ip) {
-    if (ip.substr(0, 7) == "::ffff:") {
-        return ip.substr(7)
-    }
-    if (ip == "::1") {
-        return "127.0.0.1";
-    }
-    return ip;
-}
-
-app.use((req, res, next) => {
-    let requestIp = formatIp(req.socket.remoteAddress);
-    if (allowedIps.includes(requestIp)) {
-        console.log(chalk.bgGreen(requestIp));
-        next();
-    } else {
-        console.log(chalk.bgRed(requestIp));
-        res.status(403).send('Access denied');
-    }
-});
 
 app.use(cors()); // Enable CORS
 app.use(express.json()); // for parsing application/json
@@ -45,9 +19,20 @@ const uploadDir = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir);
 }
-
 // Serve static files from the React build
 app.use(express.static(path.join(__dirname, 'build')));
+
+// Serve the React build for any other routes
+app.get('/main', (req, res) => {
+    res.sendFile(path.join(__dirname + '/build/index.html'));
+});
+
+app.use((req, res, next) => {
+    if (req.socket.remoteAddress === "::1") {
+        next();
+    } else return res.sendStatus(403);
+});
+
 
 // Set up storage engine with multer
 const storage = multer.diskStorage({
@@ -86,11 +71,6 @@ app.post('/stateSave', (req, res) => {
             res.send('State saved successfully.');
         }
     });
-});
-
-// Serve the React build for any other routes
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
 // Start the server

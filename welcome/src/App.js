@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
-import axios from 'axios';
-import { Container, Row, Col, Spinner } from 'react-bootstrap';
+import { Container, Row, Col, Spinner, Button, Modal } from 'react-bootstrap';
 import { FaShieldAlt } from 'react-icons/fa';
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,25 +31,22 @@ class ErrorBoundary extends React.Component {
 }
 
 function App() {
-  const [ip, setIp] = useState(null);
   const [isListed, setIsListed] = useState(false);
 
   useEffect(() => {
-    axios.get('https://api.ipify.org?format=json')
-      .then((response) => {
-        setIp(response.data.ip);
-        fetch('/ips.json')
-          .then(response => response.json())
-          .then(data => {
-            setIsListed(data.includes(response.data.ip));
-          });
-      })
-      .catch((error) => {
-        console.error("Error: ", error);
-      });
+    const queryParams = new URLSearchParams(window.location.search);
+    let paramsObj = {};
+    for (let param of queryParams) {
+      paramsObj[param[0]] = param[1];
+    }
+    if (paramsObj.password) {
+      if (paramsObj.password === "zampx") {
+        setIsListed(true);
+      } else setIsListed(false);
+    } else setIsListed("ask");
   }, []);
 
-  if (!ip || !isListed) {
+  if (!isListed) {
     return (
       <Container fluid style={{ backgroundColor: '#202022', height: '100vh', color: '#CACACA' }} className="d-flex flex-column justify-content-center align-items-center">
         <Row>
@@ -77,6 +72,38 @@ function App() {
         </Row>
       </Container>
     );
+  } else if (isListed === "ask") {
+    return <>
+      <div
+        className="modal show"
+        style={{ display: 'block', position: 'initial' }}
+      >
+        <Modal.Dialog>
+          <Modal.Header>
+            <Modal.Title>يرجى إدخال كلمة المرور</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p style={{ color: "red" }}>“جميع المعلومات تُحفظ محليًا”</p>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="كلمة المرور"
+              id="passwordInput"
+            />
+          </Modal.Body>
+
+          <Modal.Footer>
+            <Button variant="primary"
+              onClick={() => {
+                const passwordInput = document.getElementById('passwordInput');
+                const password = passwordInput ? passwordInput.value : "";
+                window.location.href = "/?password=" + password;
+              }}
+            >Save</Button>
+          </Modal.Footer>
+        </Modal.Dialog>
+      </div>
+    </>
   } else {
     return (
       <ErrorBoundary>
