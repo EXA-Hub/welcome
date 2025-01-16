@@ -24,7 +24,7 @@ I have created a YouTube tutorial on how to set up and use this bot. You can wat
 </h2>
 
 <!-- BEGIN YOUTUBE-CARDS -->
-[![بوت سيستم مثل بروبوت مع لوحة تحكم! 👌 (كل الأوامر!؟)](https://ytcards.demolab.com/?id=JxPRDzZspCM&title=%D8%A8%D9%88%D8%AA+%D8%B3%D9%8A%D8%B3%D8%AA%D9%85+%D9%85%D8%AB%D9%84+%D8%A8%D8%B1%D9%88%D8%A8%D9%88%D8%AA+%D9%85%D8%B9+%D9%84%D9%88%D8%AD%D8%A9+%D8%AA%D8%AD%D9%83%D9%85%21+%F0%9F%91%8C+%28%D9%83%D9%84+%D8%A7%D9%84%D8%A3%D9%88%D8%A7%D9%85%D8%B1%21%D8%9F%29&lang=en&timestamp=1722968428&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "بوت سيستم مثل بروبوت مع لوحة تحكم! 👌 (كل الأوامر!؟)")](https://www.youtube.com/watch?v=JxPRDzZspCM)
+
 <!-- END YOUTUBE-CARDS -->
 
 ## Discord Server
