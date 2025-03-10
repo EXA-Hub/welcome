@@ -24,7 +24,7 @@ I have created a YouTube tutorial on how to set up and use this bot. You can wat
 </h2>
 
 <!-- BEGIN YOUTUBE-CARDS -->
-
+[![توقفت عن صناعة المحتوى عشان أعمل منصة العملة دي](https://ytcards.demolab.com/?id=kk1ta5A3nlU&title=%D8%AA%D9%88%D9%82%D9%81%D8%AA+%D8%B9%D9%86+%D8%B5%D9%86%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D9%88%D9%89+%D8%B9%D8%B4%D8%A7%D9%86+%D8%A3%D8%B9%D9%85%D9%84+%D9%85%D9%86%D8%B5%D8%A9+%D8%A7%D9%84%D8%B9%D9%85%D9%84%D8%A9+%D8%AF%D9%8A&lang=en&timestamp=1741257307&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5 "توقفت عن صناعة المحتوى عشان أعمل منصة العملة دي")](https://www.youtube.com/watch?v=kk1ta5A3nlU)
 <!-- END YOUTUBE-CARDS -->
 
 ## Discord Server
